@@ -99,7 +99,7 @@ export default function Home() {
         <div className={styles.grid}>
 
         {camps.map((camp, key) => (
-          <a href={`http://localhost:3000/camp/${camp.code}`} className={styles.card} key={key}>
+          <a href={`/camp/${camp.code}`} className={styles.card} key={key}>
           <Image src={camp.emblem} width={500} height={500}  alt={`${camp.name} icon`} layout="responsive"/>
             <h2>{camp.name}</h2>
             <p>{camp.area}</p>

@@ -146,9 +146,17 @@ export default function Camp({params}) {
             <div className={styles.tableMatch} key={key}>
                 <p>{utc.customFormat( "#DD#/#MM#/#YYYY# #hhhh#:#mm#" )}</p>
                 <p>{match.homeTeam.shortName}</p>
+                {match.status === "FINISHED" ?
                 <p>{match.score.fullTime.home}</p>
+                :
+                <p></p>
+                }
                 <p>X</p>
+                {match.status === "FINISHED" ?
                 <p>{match.score.fullTime.away}</p>
+                :
+                <p></p>
+                }
                 <p>{match.awayTeam.shortName}</p>
                 <p>{match.matchday}</p>
 
